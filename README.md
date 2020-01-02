@@ -1,37 +1,16 @@
-# common_zoro
+### QR第三方库
+1. [ThoughtWorks.QRcode](https://www.nuget.org/packages/ThoughtWorks.QRCode), :star:$null 1.1.0$, 下载78694次. 现用版本1.0
+2. [QrCode.Net](https://www.nuget.org/packages/QRCoder/), QRCoder is a simple library, written in C#.NET, which enables you to create QR codes. It **hasn't any dependencies** to other libraries and is available as .NET Framework and .NET Core PCL version on NuGet.:star:$1.7k - 1.1.0$
 
-#### 介绍
-个人的共享库
+```cs
+using System.Drawing;  // Bitmap, Image
 
-#### 软件架构
-软件架构说明
+QRCodeGenerator qrGenerator = new QRCodeGenerator();
+QRCodeData qrCodeData = qrGenerator.CreateQrCode("The text which should be encoded.", 
+                        QRCodeGenerator.ECCLevel.Q);
+QRCode qrCode = new QRCode(qrCodeData);
+Bitmap qrCodeImage = qrCode.GetGraphic(20);
+```
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+3. [ZXing.Net](https://github.com/micjahn/ZXing.Net/), .Net port of the original java-based barcode reader and generator library zxing, [java 版本](https://github.com/zxing/zxing), 读写都可以用
+4. [其他](https://www.nuget.org/packages?q=qr), 主要还是前边3个
