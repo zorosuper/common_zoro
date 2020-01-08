@@ -5,6 +5,19 @@ Publisher-->Subscriber: Hello Subscriber, how are you?
 Note right of Subscriber: Subscriber thinks.
 Subscriber-->Publisher: I am good thanks!
 ```
+---
+```mermaid
+sequenceDiagram
+    Publisher->>Subscriber: Hello Subscriber, how are you?
+    alt is sick
+    Subscriber->>Publisher: Not so good :(
+    else is well
+    Subscriber->>Publisher: Feeling fresh like a daisy
+    end
+    opt Extra response
+    Subscriber->>Publisher: Thanks for asking
+    end
+```
 
 # 欢迎使用马克飞象
 
