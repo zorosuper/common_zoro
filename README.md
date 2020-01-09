@@ -1,4 +1,5 @@
 [TOC]
+目录需要手工书写。
 ### 目录引用
 1. 子文件夹引用[services](./services)
 2. [vscode markdown扩展](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/), 包含markdown语法教程.
@@ -6,7 +7,7 @@
 
 服务之间的相互调用采用sequence diagram来描述, 不同点在于:
 1. 图片方式, 在任何preview_app环境下都可以看到;
-2. 手写编码方式, 只能在vscode扩展下preview看到, gitee/github/visual_studio都不能看到. 
+2. 手写编码方式, 只能在vscode扩展下preview看到, gitee/github/visual_studio都不能看到. 或者需要生成HTML发布。
 ### mermaid方式
 ```mermaid
 sequenceDiagram
