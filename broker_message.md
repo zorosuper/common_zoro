@@ -1,3 +1,5 @@
+[TOC]
+
 各个系统之间的消息交互格式, 示例如下:
 
 ```sequence
@@ -5,17 +7,40 @@ Publisher-->Subscriber: Hello Subscriber, how are you?
 Note right of Subscriber: Subscriber thinks.
 Subscriber-->Publisher: I am good thanks!
 ```
+
 ---
+
 ```mermaid
 sequenceDiagram
+    <!-- 调整顺序 -->
+    <!-- 每行不超过5列 -->
+    Subscriber->>Publisher: Hello Subscriber, how are you?
     Publisher->>Subscriber: Hello Subscriber, how are you?
     alt is sick
     Subscriber->>Publisher: Not so good :(
     else is well
-    Subscriber->>Publisher: Feeling fresh like a daisy
+    Subscriber-->>Publisher: Feeling fresh like a daisy
     end
     opt Extra response
     Subscriber->>Publisher: Thanks for asking
+    end
+    Publisher->>Subscriber1: Hello Subscriber1, how are you?
+    alt is sick
+    Subscriber1->>Publisher: Not so good :(
+    else is well
+    Subscriber1-->>Publisher: Feeling fresh like a daisy
+    end
+    opt Extra response
+    Subscriber1->>Publisher: Thanks for asking
+    end
+    Publisher->>Subscriber2: Hello Subscriber2, how are you?
+    alt is sick
+    Subscriber2->>Publisher: Not so good :(
+    else is well
+    Subscriber2-->>Publisher: Feeling fresh like a daisy
+    end
+    opt Extra response
+    Subscriber2->>Publisher: Thanks for asking
     end
 ```
 
@@ -31,7 +56,7 @@ sequenceDiagram
 
 -------------------
 
-[TOC]
+
 
 ## Markdown简介
 
@@ -92,8 +117,8 @@ Bob-->Alice: I am good thanks!
 使用 `- [ ]` 和 `- [x]` 语法可以创建复选框，实现 todo-list 等功能。例如：
 
 - [x] 已完成事项
-- [ ] 待办事项1
-- [ ] 待办事项2
+- [x] 待办事项1
+- [x] 待办事项2
 
 > **注意：**目前支持尚不完全，在印象笔记中勾选复选框是无效、不能同步的，所以必须在**马克飞象**中修改 Markdown 原文才可生效。下个版本将会全面支持。
 
